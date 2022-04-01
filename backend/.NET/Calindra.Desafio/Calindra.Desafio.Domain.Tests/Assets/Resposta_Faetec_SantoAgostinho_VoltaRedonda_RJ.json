@@ -1,0 +1,69 @@
+{
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "S/n",
+          "short_name": "S/n",
+          "types": [ "street_number" ]
+        },
+        {
+          "long_name": "Rua Mil e Quinze",
+          "short_name": "R. Mil e Quinze",
+          "types": [ "route" ]
+        },
+        {
+          "long_name": "Santo Agostinho",
+          "short_name": "Santo Agostinho",
+          "types": [ "political", "sublocality", "sublocality_level_1" ]
+        },
+        {
+          "long_name": "Volta Redonda",
+          "short_name": "Volta Redonda",
+          "types": [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name": "Rio de Janeiro",
+          "short_name": "RJ",
+          "types": [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name": "Brazil",
+          "short_name": "BR",
+          "types": [ "country", "political" ]
+        },
+        {
+          "long_name": "27210-240",
+          "short_name": "27210-240",
+          "types": [ "postal_code" ]
+        }
+      ],
+      "formatted_address": "R. Mil e Quinze, S/n - Santo Agostinho, Volta Redonda - RJ, 27210-240, Brazil",
+      "geometry": {
+        "location": {
+          "lat": -22.487799,
+          "lng": -44.07035
+        },
+        "location_type": "ROOFTOP",
+        "viewport": {
+          "northeast": {
+            "lat": -22.4867584197085,
+            "lng": -44.0692078197085
+          },
+          "southwest": {
+            "lat": -22.4894563802915,
+            "lng": -44.0719057802915
+          }
+        }
+      },
+      "partial_match": true,
+      "place_id": "ChIJAQAAABe9ngARO24goIiIRec",
+      "plus_code": {
+        "compound_code": "GW6H+VV Santo Agostinho, Volta Redonda - RJ, Brazil",
+        "global_code": "589QGW6H+VV"
+      },
+      "types": [ "establishment", "point_of_interest" ]
+    }
+  ],
+  "status": "OK"
+}

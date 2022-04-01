@@ -1,0 +1,59 @@
+{
+  "results": [
+    {
+      "address_components": [
+        {
+          "long_name": "Santa Cruz",
+          "short_name": "Santa Cruz",
+          "types": [ "political", "sublocality", "sublocality_level_1" ]
+        },
+        {
+          "long_name": "Volta Redonda",
+          "short_name": "Volta Redonda",
+          "types": [ "administrative_area_level_2", "political" ]
+        },
+        {
+          "long_name": "Rio de Janeiro",
+          "short_name": "RJ",
+          "types": [ "administrative_area_level_1", "political" ]
+        },
+        {
+          "long_name": "Brazil",
+          "short_name": "BR",
+          "types": [ "country", "political" ]
+        }
+      ],
+      "formatted_address": "Santa Cruz, Volta Redonda - RJ, Brazil",
+      "geometry": {
+        "bounds": {
+          "northeast": {
+            "lat": -22.4600259,
+            "lng": -44.0848277
+          },
+          "southwest": {
+            "lat": -22.4693353,
+            "lng": -44.0997074
+          }
+        },
+        "location": {
+          "lat": -22.46496,
+          "lng": -44.0936543
+        },
+        "location_type": "APPROXIMATE",
+        "viewport": {
+          "northeast": {
+            "lat": -22.4600259,
+            "lng": -44.0848277
+          },
+          "southwest": {
+            "lat": -22.4693353,
+            "lng": -44.0997074
+          }
+        }
+      },
+      "place_id": "ChIJWTx-22S9ngARXLGa0VHtFz8",
+      "types": [ "political", "sublocality", "sublocality_level_1" ]
+    }
+  ],
+  "status": "OK"
+}

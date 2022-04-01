@@ -1,5 +1,4 @@
-﻿using Calindra.Desafio.Domain.Exceptions;
-using Calindra.Desafio.Domain.Extensions;
+﻿using Calindra.Desafio.Domain.Extensions;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -10,7 +9,7 @@ namespace Calindra.Desafio.Domain.Results
     {
         private readonly IList<string> _messages = new List<string>();
 
-        public Failure()
+        protected Failure()
             => _messages = new List<string>();
 
         public Failure(params string[] messages)
@@ -32,9 +31,9 @@ namespace Calindra.Desafio.Domain.Results
 
         public void Add(params string[] messages)
         {
-            messages = messages.Where(m => !m.IsEmpty()).ToArray();
+            messages = messages?.Where(m => !m.IsEmpty()).ToArray();
             if (messages.IsEmpty())
-                throw new CustomException($"The parameter {nameof(messages)} need valid {nameof(messages)}");
+                return;
 
             foreach (var message in messages)
                 if (!_messages.Any(m => m.ToUpper().Equals(message, System.StringComparison.InvariantCultureIgnoreCase)))

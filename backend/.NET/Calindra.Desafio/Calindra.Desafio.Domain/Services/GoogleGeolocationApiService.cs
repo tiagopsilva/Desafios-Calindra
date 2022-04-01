@@ -1,24 +1,26 @@
-﻿using Calindra.Desafio.Domain.Models.Geolocation;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
+﻿using Calindra.Desafio.Domain.Helpers;
+using Calindra.Desafio.Domain.Models.Geolocation;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Calindra.Desafio.Domain.Services
 {
-    public class GoogleGeolocationApiService : IDisposable, IGeolocationApiService
+    public class GoogleGeolocationApiService : IGeolocationApiService
     {
-        private static readonly string AccessKey = Environment.GetEnvironmentVariable("GOOGLE_GEOLOCATION_ACCESS_KEY");
-        
-        private const string HostUrl = "https://maps.googleapis.com";
-        private const string UrlPath = "/maps/api/geocode/json";
+        public const string GoogleGeolocationAccessKeyEnvironmentVariable = "GOOGLE_GEOLOCATION_ACCESS_KEY";
 
-        private HttpClient _httpClient;
+        private readonly string UrlPath;
+        private readonly string AccessKey;
+        private readonly HttpClient _httpClient;
 
-        public GoogleGeolocationApiService()
+        public GoogleGeolocationApiService(HttpClient httpClient, IConfiguration configuration)
         {
-            _httpClient = new HttpClient { BaseAddress = new Uri(HostUrl) };
+            _httpClient = httpClient;
+            _httpClient.BaseAddress = new Uri(configuration["GoogleApi:Url:Base"]);
+            UrlPath = configuration["GoogleApi:Url:Path"];
+            AccessKey = configuration[GoogleGeolocationAccessKeyEnvironmentVariable];
         }
 
         public async Task<GeolocationResponse> GetGeolocationFrom(string endereco)
@@ -28,26 +30,12 @@ namespace Calindra.Desafio.Domain.Services
             if (response.IsSuccessStatusCode)
             {
                 var content = await response.Content.ReadAsStringAsync();
-
-                return JsonConvert.DeserializeObject<GeolocationResponse>(content, new JsonSerializerSettings
-                {
-                    ContractResolver = new DefaultContractResolver
-                    {
-                        NamingStrategy = new SnakeCaseNamingStrategy { ProcessDictionaryKeys = true }
-                    }
-                });
+                return Deserializers.DeserializeJsonAsSnakeCaseNaming<GeolocationResponse>(content);
             }
             else
             {
                 return null;
             }
-        }
-
-        public void Dispose()
-        {
-            _httpClient?.Dispose();
-            _httpClient = null;
-            GC.SuppressFinalize(this);
         }
     }
 }

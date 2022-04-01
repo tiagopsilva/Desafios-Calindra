@@ -61,7 +61,11 @@ namespace Calindra.Desafio.WebApi
                 options.OperationFilter<SwaggerDefaultValues>();
             });
 
-            services.AddScoped<IGeolocationApiService, GoogleGeolocationApiService>();
+            services.AddHttpClient<IGeolocationApiService, GoogleGeolocationApiService>((provider, httpClient) =>
+            {
+                httpClient.BaseAddress = new System.Uri(Configuration["GoogleApi:Url:Base"]);
+            });
+
             services.AddScoped<DistanceCalculatorService, DistanceCalculatorService>();
             services.AddScoped<ICommandHandler<Addresses>, CalculatorHandler>();
 

@@ -1,5 +1,4 @@
 ﻿using Calindra.Desafio.Domain.Commands.Inputs;
-using Calindra.Desafio.Domain.Exceptions;
 using Calindra.Desafio.Domain.Models.Responses;
 using Calindra.Desafio.Domain.Results;
 using Microsoft.Extensions.Logging;
@@ -42,11 +41,6 @@ namespace Calindra.Desafio.Domain.Services
                 }
 
                 return Result.Ok(addressesInfo);
-            }
-            catch (CustomException e)
-            {
-                _logger.LogError(e, $"Erro ao processar as distâncias! \nMessage: {e.Message}");
-                return Result.FailWithData(string.Empty, HttpStatusCode.BadRequest, "Unable to process distances", $"Message: {e.Message}");
             }
             catch (Exception e)
             {

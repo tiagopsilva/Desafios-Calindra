@@ -17,12 +17,6 @@ namespace Calindra.Desafio.Domain.Results
         public MethodResult(string propertyName, params string[] messages)
             => Add(propertyName, messages);
 
-        public MethodResult(int errorCode, string propertyName, params string[] messages)
-        {
-            ErrorCode = errorCode;
-            Add(propertyName, messages);
-        }
-
         public IReadOnlyCollection<Failure> Failures
             => new ReadOnlyCollection<Failure>(_failures);
 
@@ -34,7 +28,7 @@ namespace Calindra.Desafio.Domain.Results
 
         public void Add(string propertyName, params string[] messages)
         {
-            messages = messages.Where(m => !m.IsEmpty()).ToArray();
+            messages = messages?.Where(m => !m.IsEmpty()).ToArray();
             if (messages.IsEmpty())
                 messages = new[] { "Is invalid" };
 

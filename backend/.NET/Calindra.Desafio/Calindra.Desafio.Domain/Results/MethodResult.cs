@@ -14,9 +14,6 @@ namespace Calindra.Desafio.Domain.Results
         public MethodResult(string propertyName, params string[] messages)
             : base(propertyName, messages) { }
 
-        public MethodResult(int errorCode, string propertyName, params string[] messages)
-            : base(errorCode, propertyName, messages) { }
-
         public void Add(IReadOnlyCollection<Failure> failures)
         {
             foreach (var failure in failures)
