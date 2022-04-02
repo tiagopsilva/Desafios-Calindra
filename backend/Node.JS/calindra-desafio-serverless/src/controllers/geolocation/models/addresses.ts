@@ -1,3 +1,3 @@
 export class Addresses {
-  public addresses: string[];
+  public addressList: string[];
 }

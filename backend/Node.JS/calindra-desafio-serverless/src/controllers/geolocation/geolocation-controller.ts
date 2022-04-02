@@ -6,7 +6,6 @@ import { DistanceCalculatorService } from "./services/distance-calculator.servic
 import { GoogleGeolocationApiService } from "./services/google-geolocation-api.service.js";
 
 module.exports.post = async (request: any) => {
-    console.log(request);
     const googleGeolocationApiService = new GoogleGeolocationApiService();
     const distanceCalculatorService = new DistanceCalculatorService(googleGeolocationApiService);
     const addresses = (typeof request.body == "string" ? JSON.parse(request.body) : request.body) as Addresses;

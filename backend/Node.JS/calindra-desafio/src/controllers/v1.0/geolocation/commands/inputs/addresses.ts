@@ -7,6 +7,6 @@ export class Addresses implements Command {
     description: 'List of addresses',
     minimum: 2
   })
-  public addresses: string[];
+  public addressList: string[];
 
 }

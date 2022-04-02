@@ -17,7 +17,7 @@ export class DistanceCalculatorService {
     constructor(private geolocationApiService: GoogleGeolocationApiService) { }
 
     public calculateDistancesFromAddressess(addresses: Addresses): Observable<MethodResult> {
-        const { shorterQuantity, greatherQuantity } = this.calculateQuantities(addresses.addresses);
+        const { shorterQuantity, greatherQuantity } = this.calculateQuantities(addresses.addressList);
         const referencesInfo = this.requestGeolocationReferencesInfo(addresses);
         return referencesInfo.pipe(
             map((references: GeolocationReferencesInfo[]) => {
@@ -40,7 +40,7 @@ export class DistanceCalculatorService {
     }
 
     private requestGeolocationReferencesInfo(addresses: Addresses): Observable<GeolocationReferencesInfo[]> {
-        const tasks$ = addresses.addresses.map(address => this.geolocationApiService.getGeolocationFrom(address));
+        const tasks$ = addresses.addressList.map(address => this.geolocationApiService.getGeolocationFrom(address));
         const results = forkJoin(tasks$);
         return results.pipe(map((gelocationResponses: GeolocationResponse[]) => this.mapGeolocationResponsesToGeolocationReferencesInfo(gelocationResponses)));
     }

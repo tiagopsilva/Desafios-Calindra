@@ -18,7 +18,7 @@ export class DistanceCalculatorService {
 
     public async calculateDistancesFromAddressess(addresses: Addresses): Promise<MethodResult> {
         try {
-            const { shorterQuantity, greatherQuantity } = this.calculateQuantities(addresses.addresses);
+            const { shorterQuantity, greatherQuantity } = this.calculateQuantities(addresses.addressList);
             const referencesInfo = await this.requestGeolocationReferencesInfo(addresses);
             referencesInfo.forEach(reference => {
                 referencesInfo.filter(ref => ref != reference).forEach(ref => {
@@ -36,7 +36,7 @@ export class DistanceCalculatorService {
     }
 
     private async requestGeolocationReferencesInfo(addresses: Addresses): Promise<GeolocationReferencesInfo[]> {
-        const promises = addresses.addresses.map(async address => {
+        const promises = addresses.addressList.map(async address => {
             return await this.geolocationApiService.getGeolocationFrom(address);
         });
         const results: GeolocationResponse[] = await Promise.all(promises);
