@@ -1,0 +1,12 @@
+<a [routerLink]="['/product/' + productUrl(product)]">
+  <mat-card *ngIf="product" class="product-card">
+    <img
+      mat-card-image
+      src="{{ getImageUrl(product) }}"
+      alt="Foto de {{ product.name }}"
+    />
+    <mat-card-content>
+      <p>{{ product.name }}</p>
+    </mat-card-content>
+  </mat-card>
+</a>

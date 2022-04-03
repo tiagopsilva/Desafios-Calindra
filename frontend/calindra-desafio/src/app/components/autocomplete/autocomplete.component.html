@@ -1,0 +1,22 @@
+<form class="example-form" style="max-width: 80% !important">
+  <mat-form-field class="example-full-width">
+    <input
+      type="text"
+      placeholder="Busque aqui seu produto"
+      aria-label="Text"
+      matInput
+      [formControl]="searchControl"
+      [matAutocomplete]="auto"
+      (keyup.enter)="onKeyPressEnter($event)"
+    />
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="parseDropDownSelection">
+      <ng-container>
+        <mat-option *ngFor="let product of filteredOptions$ | async" [value]="product">
+          <span>{{ product.name }}</span>
+        </mat-option>
+      </ng-container>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+<router-outlet></router-outlet>

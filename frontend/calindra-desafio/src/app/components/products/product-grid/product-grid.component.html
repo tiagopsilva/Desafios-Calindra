@@ -1,0 +1,15 @@
+<div style="margin: auto">
+  <mat-grid-list
+    [cols]="gridColumns"
+    rowHeight="1:1.5"
+    (window:resize)="handleSize($event)"
+  >
+    <mat-grid-tile *ngFor="let product of products">
+      <app-product [product]="product"></app-product>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <div *ngIf="!products || !products.length">
+    <p>A consulta não retornou nenhum item</p>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+<span *ngIf="!(product$ | async)">Carregando ...</span>
+<div *ngIf="product$ | async as product">
+  <H1>Página do produto: {{ product.name }}</H1>
+  <mat-card *ngIf="product" class="product-card" style="max-width: 800px; margin: auto;">
+    <img
+      mat-card-image
+      src="{{ getImageUrl(product) }}"
+      alt="Foto de {{ product.name }}"
+    />
+    <mat-card-content>
+      <p>{{ product.name }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

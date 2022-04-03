@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "_meta": { "score": 18198.42, "visitsClickCount": "37165" },
+      "id": "1521479897",
+      "name": "Fritadeira Elétrica Sem Óleo – Air Fryer Mondial AF-34 3,2L 1270W Preta",
+      "type": "organic"
+    },
+    {
+      "_meta": { "score": 15796.298, "visitsClickCount": "28486" },
+      "id": "3467632124",
+      "name": "Fritadeira Elétrica sem Óleo Multilaser CE022 Air Fry 4l 1500w 220V",
+      "type": "organic"
+    },
+    {
+      "_meta": { "score": 14969.432, "visitsClickCount": "28698" },
+      "id": "134409899",
+      "name": "Fritadeira Elétrica Sem Óleo - Air Fryer Mondial AF-31 New Pratic 3,5L Preta com Timer",
+      "type": "organic"
+    },
+    {
+      "_meta": { "score": 14022.627, "visitsClickCount": "28602" },
+      "id": "2757357790",
+      "name": "Fritadeira Air Fry Bfr21p - Britânia",
+      "type": "organic"
+    },
+    {
+      "_meta": { "score": 9957.004, "visitsClickCount": "19514" },
+      "id": "1798302226",
+      "name": "Fritadeira Philco Air Fry Gourmet Black PFR15P",
+      "type": "organic"
+    },
+    {
+      "_meta": { "score": 8644.286, "visitsClickCount": "15145" },
+      "id": "4232982031",
+      "name": "AirFryer Electrolux 3,2L Branca Efficient (EAF11) - Mecânica, 1400W",
+      "type": "organic"
+    }
+  ],
+  "suggestions": [
+    { "autoFilter": {}, "categories": [], "term": "air fryer" },
+    { "autoFilter": {}, "categories": [], "term": "a32" },
+    {
+      "autoFilter": {},
+      "categories": [],
+      "term": "fritadeira air fryer mondial"
+    },
+    { "autoFilter": {}, "categories": [], "term": "a12" },
+    { "autoFilter": {}, "categories": [], "term": "ar condicionado" },
+    { "autoFilter": {}, "categories": [], "term": "a22" }
+  ]
+}

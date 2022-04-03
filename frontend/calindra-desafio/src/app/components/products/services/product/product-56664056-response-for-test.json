@@ -1,0 +1,243 @@
+{
+  "installment": {
+    "details": [
+      {
+        "status": 200,
+        "success": true,
+        "metadata": {
+          "ignore-errors": "ignore"
+        }
+      }
+    ],
+    "result": [[]]
+  },
+  "offer": {
+    "details": {
+      "status": 200,
+      "success": true,
+      "metadata": {}
+    },
+    "result": {
+      "_result": {
+        "limit": 1,
+        "offset": 0,
+        "total": 5
+      },
+      "offers": [
+        {
+          "_embedded": {
+            "seller": {
+              "_links": {
+                "self": {
+                  "href": "http://seller-v1-americanas-npf.internal.b2w.io/seller/32546505000142"
+                }
+              },
+              "id": "32546505000142",
+              "name": "Abafarto Store"
+            }
+          },
+          "_links": {
+            "product": {
+              "href": "http://product-v3-americanas-npf.internal.b2w.io/product/56664056",
+              "id": "56664056"
+            },
+            "sku": {
+              "href": "http://sku-v2-americanas-npf.internal.b2w.io/sku/56664057",
+              "id": "56664057"
+            }
+          },
+          "availability": {
+            "_embedded": {
+              "stock": {
+                "_links": {
+                  "self": {
+                    "href": "http://stock-v4-americanas-npf.internal.b2w.io/stock/availability?sku.id=56664057&seller.id=32546505000142&condition=NEW"
+                  }
+                },
+                "quantity": 487,
+                "warehouses": ["98"]
+              }
+            }
+          },
+          "cashback": {
+            "rate": 0,
+            "value": 0
+          },
+          "condition": "NEW",
+          "currency": "BRL",
+          "discount": {
+            "rate": 0,
+            "value": 0
+          },
+          "id": "6012bc530c0704426699e0aa",
+          "immutableId": "0efc01c8-df0f-4fd9-af15-926d3acc64d3",
+          "isElegibleForFirstPosition": true,
+          "isExpired": false,
+          "paymentOptions": {
+            "BOLETO": {
+              "cashback": {
+                "rate": 0,
+                "value": 0
+              },
+              "discount": {
+                "rate": 0,
+                "value": 0
+              },
+              "price": 69.9
+            },
+            "CARTAO_VISA": {
+              "cashback": {
+                "rate": 0,
+                "value": 0
+              },
+              "discount": {
+                "rate": 0,
+                "value": 0
+              },
+              "installments": [
+                {
+                  "annualCET": 0,
+                  "cashback": {
+                    "rate": 0,
+                    "value": 0
+                  },
+                  "discount": {
+                    "rate": 0,
+                    "value": 0
+                  },
+                  "interestAmount": 0,
+                  "interestRate": 0,
+                  "quantity": 1,
+                  "total": 69.9,
+                  "value": 69.9
+                }
+              ],
+              "price": 69.9
+            }
+          },
+          "salesPrice": 69.9,
+          "similarQuantity": 1,
+          "updatedAt": "2022-04-01T15:18:55.986"
+        }
+      ]
+    }
+  },
+  "offerStamp": {
+    "details": [
+      {
+        "status": 200,
+        "success": true,
+        "metadata": {}
+      }
+    ],
+    "result": [[]]
+  },
+  "product": {
+    "details": {
+      "status": 200,
+      "success": true,
+      "metadata": {}
+    },
+    "result": {
+      "attributes": [{}],
+      "id": "56664056",
+      "images": [
+        {
+          "big": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054G1.jpg",
+          "extraLarge": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_1SZ.jpg",
+          "large": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_1GG.jpg",
+          "medium": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054P1.jpg",
+          "small": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054P.jpg"
+        },
+        {
+          "extraLarge": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_2SZ.jpg",
+          "large": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_2GG.jpg"
+        },
+        {
+          "extraLarge": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_3SZ.jpg",
+          "large": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_3GG.jpg"
+        },
+        {
+          "extraLarge": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_4SZ.jpg",
+          "large": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_4GG.jpg"
+        },
+        {
+          "extraLarge": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_5SZ.jpg",
+          "large": "https://images-americanas.b2w.io/produtos/01/00/img/56664/0/56664054_5GG.jpg"
+        }
+      ],
+      "name": "Kit Com 5 Camisetas Básicas Esportivas Masculina Preta, Branca E Cinza",
+      "rating": {
+        "average": 2.35,
+        "recommendations": 8,
+        "reviews": 20
+      },
+      "skus": [
+        {
+          "diffs": [
+            {
+              "type": "Cor",
+              "value": "Multicolorida"
+            },
+            {
+              "type": "Tamanho",
+              "value": "P"
+            }
+          ],
+          "id": "56664054"
+        },
+        {
+          "diffs": [
+            {
+              "type": "Cor",
+              "value": "Multicolorida"
+            },
+            {
+              "type": "Tamanho",
+              "value": "M"
+            }
+          ],
+          "id": "56664057"
+        },
+        {
+          "diffs": [
+            {
+              "type": "Cor",
+              "value": "Multicolorida"
+            },
+            {
+              "type": "Tamanho",
+              "value": "G"
+            }
+          ],
+          "id": "56664061"
+        },
+        {
+          "diffs": [
+            {
+              "type": "Cor",
+              "value": "Multicolorida"
+            },
+            {
+              "type": "Tamanho",
+              "value": "GG"
+            }
+          ],
+          "id": "56664060"
+        }
+      ]
+    }
+  },
+  "stamp": {
+    "details": [
+      {
+        "status": 200,
+        "success": true,
+        "metadata": {
+          "ignore-errors": "ignore"
+        }
+      }
+    ],
+    "result": [[]]
+  }
+}
