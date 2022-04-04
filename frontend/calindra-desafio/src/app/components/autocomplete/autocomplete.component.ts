@@ -58,7 +58,7 @@ export class AutocompleteComponent implements OnInit {
     return this.autocompleteService.search(term);
   }
 
-  public onKeyPressEnter(event: Event) {
+  public search(event: Event) {
     event.preventDefault();
     event.stopPropagation();
     this.autocomplete?.closePanel();

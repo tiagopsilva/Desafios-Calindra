@@ -10,6 +10,7 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,6 +33,7 @@ import { ProductDetailsComponent } from './components/products/product-details/p
     MatButtonModule,
     MatCardModule,
     MatGridListModule,
+    MatIconModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,

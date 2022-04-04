@@ -7,3 +7,8 @@ mat-card {
 mat-card > img {
   max-height: 80%;
 }
+
+.unstyled-link {
+  color: inherit;
+  text-decoration: none;
+}
