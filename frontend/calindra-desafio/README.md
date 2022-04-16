@@ -1,7 +1,7 @@
 ### Desafio Frontend
 -----
 
-#### O desafio backend que consiste na obtenção das informações de geolocalização pelas APIs do Google.
+#### O desafio frontend que consiste no consumo de uma API para autocomplete para busca por produtos da Americanas.
 O desafio que escolhi solicita que crie uma página com um campo para servir como busca.
 A busca será realizada na api indicada. Porém, não foi possível encontrar a imagem do produto e por isso foi necessário realizar o acesso a outro endpoint que encontrei.
 
